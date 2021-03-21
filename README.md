@@ -9,6 +9,16 @@ Customized implementation of [U-Net](https://arxiv.org/abs/1505.04597) and [BESN
 
 [LGG Brain Segmentation Dataset](https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation) contains 3,923 brain MR (FLAIR) images paired with segmentation masks. In the dataset, it does not have edges. To create edges, I used edge detection ([cv2.Canny](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html)) in data/lgg-mri-segmentation/prepare_data.py.
 
+## Downloading and Preparing Dataset
+
+### [Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/)
+1. Download: go to `data/oxford-iiit-pet` and download dataset by running command: `sh download_data.sh`
+2. Prepare: go to `data/oxford-iiit-pet` and run: `python prepare_dataset.py`
+
+### [LGG Brain Segmentation Dataset](https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation)
+1. Download: go to `data/lgg-mri-segmentation` and download dataset by running command: `sh download_data.sh` *** kaggle API is used here. If there is no kaggle API, go to [kaggle website](https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation) to download.
+2. Prepare: go to `data/lgg-mri-segmentation` and run: `python prepare_dataset.py`
+
 ## Training
 ```shell script
 > python train.py -h
