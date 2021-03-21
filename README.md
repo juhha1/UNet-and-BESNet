@@ -1,7 +1,7 @@
 # UNet and BESNet for semantic segmentation
 
-![besnet example with pet data - shiba](images/pet@besnet_with_bece-shiba_inu_100.gif)
-![besnet example with mri data - CS_4933_20010208_8](images/mri@unet-TCGA_CS_4944_20010208_8.gif)
+![example_image-pet](images/pet@besnet_with_bece-shiba_inu_100.gif)
+![example_image-mri](images/mri@besnet_with_bece-TCGA_CS_4944_20010208_8.gif)
 
 Customized implementation of [U-Net](https://arxiv.org/abs/1505.04597) and [BESNet](https://link.springer.com/chapter/10.1007%2F978-3-030-00934-2_26) in PyTorch and Keras (not updated yet) for [Oxford-IIIT Pet Dataset](https://www.robots.ox.ac.uk/~vgg/data/pets/) and [LGG Brain Segmentation Dataset](https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation).
 
@@ -41,3 +41,19 @@ optional arguments:
 
 <i>BESNet</i> takes additional argument `--bece-loss` for whether to implement Boundary Enhanced Cross-Entropy (BECE) loss or not. To implement BECE loss, `--alpha` (0.5 by default) and `--beta` (1 by default) should be set as well.
 
+## Example Images
+### Pet Dataset
+#### UNet
+![pet, unet](images/pet@unet-shiba_inu_100.gif)
+#### BESNet without BECE loss
+![pet, besnet, without bece](images/pet@besnet_without_bece-shiba_inu_100.gif)
+#### BESNet with BECE loss
+![pet, besnet, with bece](images/pet@besnet_with_bece-shiba_inu_100.gif)
+
+### MRI Dataset
+#### UNet
+![mri, unet](images/mri@unet-TCGA_CS_4944_20010208_8.gif)
+#### BESNet without BECE loss
+![mri, besnet, without bece](images/mri@besnet_without_bece-TCGA_CS_4944_20010208_8.gif)
+#### BESNet with BECE loss
+![mri, besnet, with bece](images/mri@besnet_with_bece-TCGA_CS_4944_20010208_8.gif)
